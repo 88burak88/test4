@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okullar Arası Mesafe Hesaplayıcı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Okullar Arası Mesafe Hesaplayıcı</h1>
+        
+        <div class="input-section">
+            <div class="select-group">
+                <label for="okulTuru">Okul Türü:</label>
+                <select id="okulTuru">
+                    <option value="">Lütfen seçiniz</option>
+                    <option value="lise">Lise</option>
+                    <option value="ortaokul">Ortaokul</option>
+                </select>
+            </div>
+
+            <div class="select-group">
+                <label for="okul1">Başlangıç Okulu:</label>
+                <select id="okul1" disabled>
+                    <option value="">Önce okul türü seçiniz</option>
+                </select>
+            </div>
+
+            <div class="select-group">
+                <label for="okul2">Bitiş Okulu:</label>
+                <select id="okul2" disabled>
+                    <option value="">Önce okul türü seçiniz</option>
+                </select>
+            </div>
+
+            <button id="calculate" disabled>Mesafeyi Hesapla</button>
+        </div>
+
+        <div id="result" class="result-section">
+            <p>Lütfen önce okul türünü seçiniz.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

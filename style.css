@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.select-group {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 15px;
+}
+
+.select-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-end;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.result-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.nearest-schools-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.nearest-schools-container h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.nearest-schools-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.nearest-schools-table th,
+.nearest-schools-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.nearest-schools-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+}
+
+.nearest-schools-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.nearest-schools-table tr:hover {
+    background-color: #e9e9e9;
+}
+
+/* Responsive düzen */
+@media (max-width: 768px) {
+    .input-section {
+        flex-direction: column;
+    }
+
+    .select-group {
+        min-width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+
+.nearest-schools-table td:last-child {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Daha iyi mobil deneyimi */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    select, input[type="text"] {
+        padding: 8px;
+    }
+
+    .nearest-schools-table th,
+    .nearest-schools-table td {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}
