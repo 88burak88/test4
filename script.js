@@ -438,14 +438,14 @@ function calculateDistance() {
     const okul1Name = okulListesi[okul1Index];
     const okul2Name = okulListesi[okul2Index];
 
-    // En yakın 5 okulu bul
+    // En yakın 8 okulu bul
     const nearestSchools = findNearestSchools(okul1Index, distanceMatrix, okulListesi);
 
     // Sonuç HTML'i oluştur
     let html = `
         <p><strong>${okul1Name}</strong> ile <strong>${okul2Name}</strong> arası mesafe: <strong>${distance} km</strong></p>
         <div class="nearest-schools-container">
-            <h3>${okul1Name} Okuluna En Yakın 5 Okul:</h3>
+            <h3>${okul1Name} Okuluna En Yakın 8 Okul:</h3>
             <table class="nearest-schools-table">
                 <thead>
                     <tr>
@@ -489,7 +489,7 @@ function findNearestSchools(selectedSchoolIndex, distanceMatrix, okulListesi) {
     const sortedSchools = filteredSchools.sort((a, b) => a.distance - b.distance);
 
     // İlk 5 okulu döndür
-    return sortedSchools.slice(0, 5);
+    return sortedSchools.slice(0, 8);
 }
 
 // Sayfa yüklendiğinde
